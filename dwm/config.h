@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FontAwesome:size=13" };
 static const char dmenufont[]       = "Source Code Pro:size=12";
 //background color
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#000000";
 //inactive window border color
 static const char col_gray2[]       = "#444444";
 //font color
@@ -17,7 +17,7 @@ static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (blue) and active window border color
-static const char col_cyan[]        = "#0b57a4";
+static const char col_cyan[]        = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -67,7 +67,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 //static const char *filemanager[] = { "
 // Custom app shortcuts definitions
 static const char *monitor[] = { "/usr/bin/htop", NULL };
-static const char *spotify[] = { "spotify", NULL };
+static const char *music[] = { "ncmpcpp", NULL };
 static const char *web[] = { "firefox", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *idea[] = { "intellij-iu", NULL };
@@ -92,7 +92,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = idea } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = spotify } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = music } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
@@ -119,11 +119,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,              		    XK_Right,      shiftview,  	   { .i = +1 } },
-	{ MODKEY,              		    XK_Left,      shiftview,      { .i = -1 } },
+	{ MODKEY,              		    XK_bracketright,      shiftview,  	   { .i = +1 } },
+	{ MODKEY,              		    XK_bracketleft,      shiftview,      { .i = -1 } },
 	{ MODKEY,			XK_F11,      spawn,          {.v = volupcmd   } },
 	{ MODKEY,                       XK_F10,      spawn,          {.v = voldowncmd   } },
-	 { MODKEY,                       XK_F9,      spawn,          {.v = voldowncmd   } },
+	{ MODKEY,                       XK_F9,      spawn,          {.v = voldowncmd   } },
+	{ MODKEY,                       XK_F5,      spawn,          {.v = medprevcmd   } },
+	{ MODKEY,                       XK_F6,      spawn,          {.v = mednextcmd   } },
+	{ MODKEY,                       XK_F7,      spawn,          {.v = medplaypausecmd   } },
     { 0,                       XF86XK_AudioRaiseVolume,     spawn,          {.v = volupcmd   } },
     { 0,                       XF86XK_AudioLowerVolume,     spawn,          {.v = voldowncmd } },
     { 0,                       XF86XK_AudioMute,     spawn,          {.v = volmutecmd } },
