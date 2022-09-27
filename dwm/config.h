@@ -9,19 +9,20 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FontAwesome:size=13" };
 static const char dmenufont[]       = "Source Code Pro:size=12";
 //background color
-static const char col_gray1[]       = "#000000";
+static const char col_gray1[]       = "#222222";
 //inactive window border color
 static const char col_gray2[]       = "#444444";
 //font color
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#eeeeee";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (blue) and active window border color
-static const char col_cyan[]        = "#000000";
+static const char col_cyan[]        = "#035577";
+static const char col_border[]      = "#770000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_border  },
 };
 
 /* tagging */
@@ -71,6 +72,7 @@ static const char *music[] = { "ncmpcpp", NULL };
 static const char *web[] = { "firefox", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *idea[] = { "intellij-iu", NULL };
+static const char *slock[] = {"slock",NULL};
 // Volume controls
 //static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 //static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
@@ -105,6 +107,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,	   zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,	                    XK_q,      killclient,     {0} },
+	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = slock} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
