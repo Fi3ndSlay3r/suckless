@@ -55,8 +55,8 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
@@ -73,6 +73,7 @@ static const char *web[] = { "firefox", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *idea[] = { "intellij-iu", NULL };
 static const char *slock[] = {"slock",NULL};
+static const char *opera[] = {"opera",NULL};
 // Volume controls
 //static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 //static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
@@ -108,6 +109,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,	                    XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = slock} },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = opera} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -122,8 +124,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,              		    XK_bracketright,      shiftview,  	   { .i = +1 } },
-	{ MODKEY,              		    XK_bracketleft,      shiftview,      { .i = -1 } },
+	{ MODKEY,              		    XK_Right,      shiftview,  	   { .i = +1 } },
+	{ MODKEY,              		    XK_Left,      shiftview,      { .i = -1 } },
 	{ MODKEY,			XK_F11,      spawn,          {.v = volupcmd   } },
 	{ MODKEY,                       XK_F10,      spawn,          {.v = voldowncmd   } },
 	{ MODKEY,                       XK_F9,      spawn,          {.v = voldowncmd   } },
