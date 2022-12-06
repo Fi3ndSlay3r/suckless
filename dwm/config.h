@@ -6,7 +6,7 @@ static const unsigned int gappx     = 5;        /* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12", "FontAwesome6Brands:size=10:antialias:true", "FontAwesome6Free:size=10:antialias:true", "FontAwesome6Free:style=Solid:size=10:antialias:true"};
+static const char *fonts[]          = { "monospace:size=11", "FontAwesome6Brands:size=10:antialias:true", "FontAwesome6Free:size=10:antialias:true", "FontAwesome6Free:style=Solid:size=10:antialias:true"};
 static const char dmenufont[]       = "Source Code Pro:size=11";
 //background color
 static const char col_gray1[]       = "#222222";
