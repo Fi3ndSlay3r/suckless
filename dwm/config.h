@@ -90,7 +90,7 @@ static const char *volmaxcmd[] = { "/bin/bash", "-c", "pamixer -D default sset M
   static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
   static const char *mednextcmd[] = { "playerctl", "next", NULL };
   static const char *medprevcmd[] = { "playerctl", "previous", NULL };
-
+  static const char *flameshot[] = {"flameshot", "gui", NULL};
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
@@ -100,6 +100,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,       spawn,          {.v = music } },
 	{ MODKEY,                       XK_d,       spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return,  spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_p,       spawn,          {.v = flameshot} },
 	{ MODKEY,                       XK_t,       togglebar,      {0} },
 	{ MODKEY,                       XK_j,       focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,       focusstack,     {.i = -1 } },
@@ -118,15 +119,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,   togglefloating, {0} },
 	{ MODKEY,                       XK_0,       view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,       tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_b,   focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_n,  focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_comma,   focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period,  focusmon,       {.i = +1 } },
 	{ MODKEY,                       XK_minus,   setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,   setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,   setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,  tagmon,         {.i = +1 } },
-	{ MODKEY,              		XK_period,       shiftview,	    { .i = +1 } },
-	{ MODKEY,              		XK_comma,       shiftview,      { .i = -1 } },
+	{ MODKEY,              		XK_n,       shiftview,	    { .i = +1 } },
+	{ MODKEY,              		XK_b,       shiftview,      { .i = -1 } },
 	{ MODKEY,			XK_F11,     spawn,          {.v = volupcmd   } },
 	{ MODKEY,                       XK_F10,     spawn,          {.v = voldowncmd   } },
 	{ MODKEY,                       XK_F9,      spawn,          {.v = volmutecmd   } },
