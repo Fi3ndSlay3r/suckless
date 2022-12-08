@@ -6,8 +6,8 @@ static const unsigned int gappx     = 5;        /* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=11", "FontAwesome6Brands:size=10:antialias:true", "FontAwesome6Free:size=10:antialias:true", "FontAwesome6Free:style=Solid:size=10:antialias:true"};
-static const char dmenufont[]       = "Source Code Pro:size=11";
+static const char *fonts[]          = { "Roboto Mono:size=11", "FontAwesome6Brands:size=10:antialias:true", "FontAwesome6Free:size=10:antialias:true", "FontAwesome6Free:style=Solid:size=10:antialias:true"};
+static const char dmenufont[]       = "Roboto Mono:size=11";
 //background color
 static const char col_gray1[]       = "#222222";
 //inactive window border color
@@ -17,7 +17,7 @@ static const char col_gray3[]       = "#eeeeee";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (blue) and active window border color
-static const char col_cyan[]        = "#035577";
+static const char col_cyan[]        = "#0056bb";
 static const char col_border[]      = "#770000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -70,7 +70,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *monitor[] = { "/usr/bin/btop", NULL };
 static const char *music[] = { "spotify", NULL };
 static const char *web[] = { "firefox", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *code[] = { "code", NULL };
 static const char *slock[] = {"slock",NULL};
 
