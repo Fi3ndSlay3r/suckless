@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "","" ,"", "","", "", "", "" };
+static const char *tags[] = { "", "","" ,"", "","", "", "", "" };
 #include <X11/XF86keysym.h>
 static const Rule rules[] = {
 	/* xprop(1):
@@ -67,7 +67,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 //static const char *filemanager[] = { "
 // Custom app shortcuts definitions
-static const char *monitor[] = { "/usr/bin/btop", NULL };
+static const char *monitor[] = { "/usr/binr/btop", NULL };
 static const char *music[] = { "spotify", NULL };
 static const char *web[] = { "firefox", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
@@ -141,15 +141,15 @@ static Key keys[] = {
     	{ 0, 	      XF86XK_AudioNext,             spawn,          {.v = mednextcmd } },
     	{ 0, 	      XF86XK_AudioPrev,             spawn,          {.v = medprevcmd } },
 
-	TAGKEYS(                       XK_KP_End,                      0)
-	TAGKEYS(                        XK_KP_Down,                      1)
-	TAGKEYS(                        XK_KP_Next,                      2)
-	TAGKEYS(                        XK_KP_Left,                      3)
-	TAGKEYS(                        XK_KP_Begin,                      4)
-	TAGKEYS(                        XK_KP_Right,                      5)
-	TAGKEYS(                        XK_KP_Home,                      6)
-	TAGKEYS(                        XK_KP_Up,                      7)
-	TAGKEYS(                        XK_KP_Prior,                      8)
+	TAGKEYS(                       XK_1,                      0)
+	TAGKEYS(                        XK_2,                      1)
+	TAGKEYS(                        XK_3,                      2)
+	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
+	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
@@ -169,4 +169,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
