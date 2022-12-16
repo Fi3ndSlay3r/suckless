@@ -3,4 +3,5 @@ slstatus &
 #xrandr --output LVDS-1 --auto
 twmnd &
 setxkbmap pl
+syncthing serve --no-browser &
 exec dwm
