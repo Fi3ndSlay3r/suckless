@@ -27,7 +27,8 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "","" ,"", "","", "", "", "" };
+//static const char *tags[] = { "", "","" ,"", "","", "", "" };
+static const char *tags[] = { "1", "2","3" ,"4", "5","6", "8", "9" };
 #include <X11/XF86keysym.h>
 static const Rule rules[] = {
 	/* xprop(1):
@@ -126,8 +127,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,   setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,  tagmon,         {.i = +1 } },
-	{ MODKEY,              		XK_n,       shiftview,	    { .i = +1 } },
-	{ MODKEY,              		XK_b,       shiftview,      { .i = -1 } },
+	{ MODKEY,              		XK_bracketright,       shiftview,	    { .i = +1 } },
+	{ MODKEY,              		XK_bracketleft,       shiftview,      { .i = -1 } },
 	{ MODKEY,			XK_F11,     spawn,          {.v = volupcmd   } },
 	{ MODKEY,                       XK_F10,     spawn,          {.v = voldowncmd   } },
 	{ MODKEY,                       XK_F9,      spawn,          {.v = volmutecmd   } },
