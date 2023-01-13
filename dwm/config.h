@@ -69,8 +69,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 // Custom app shortcuts definitions
 static const char *monitor[] = { "/usr/binr/btop", NULL };
 static const char *music[] = { "spotify", NULL };
-static const char *web[] = { "firefox", NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *web[] = { "librewolf", NULL };
+static const char *termcmd[]  = { "tilix", NULL };
 static const char *code[] = { "code", NULL };
 static const char *slock[] = {"slock",NULL};
 
