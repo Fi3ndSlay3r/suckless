@@ -1,5 +1,5 @@
 /* user and group to drop privileges to */
-static const char *user  = "ap";
+static const char *user  = "adam";
 static const char *group = "wheel";
 
 static const char *colorname[NUMCOLS] = {
