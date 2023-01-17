@@ -1,7 +1,9 @@
 slstatus &
-#xrandr --output LVDS-1 --off --output VGA-1 --primary
-#xrandr --output LVDS-1 --auto
-twmnd &
+mons=$(xrandr | grep -w "connected" | sed 's/\s.*$//')
+extMon=$(echo $mons | awk '{print $2;}')
+intMon=$(echo $mons | awk '{print $1;}')
+xrandr --output $intMon --off --output $extMon --primary
+dunst &
 setxkbmap pl
 syncthing serve --no-browser &
 exec dwm
