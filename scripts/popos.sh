@@ -54,8 +54,9 @@ rm $HOME/.zshrc
 rm $HOME/.xinitr
 cp $HOME/$work_dir/suckless/conf/dwm.desktop $HOME/
 ln -s $HOME/$work_dir/suckless/conf/.xinitrc $HOME/
-ln -s $HOME/$work_dir/suckless/conf/.zshrc $HOME/
-lb -s $HOME/$work_dir/dotfiles/.tmux.conf $HOME/
+ln -s $HOME/$work_dir/suckless/.zshrc $HOME/
+ln -s $HOME/$work_dir/dotfiles/.tmux.conf $HOME/
+
 
 cd $HOME/$work_dir/suckless/dwm && sudo make clean install
 cd $HOME/$work_dir/suckless/slstatus && sudo make clean install
