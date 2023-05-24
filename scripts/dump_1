@@ -1,0 +1,52 @@
+[/]
+screensaver=['<Shift><Super>semicolon']
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+screensaver=['<Shift><Super>semicolon']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='gnome-terminal'
+name='Launch terminal'
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+next=['<Super>period']
+play=['<Super>slash']
+previous=['<Super>comma']
+screensaver=['<Shift><Super>semicolon']
+volume-down=['<Super>minus']
+volume-mute=['<Shift><Super>minus']
+volume-up=['<Super>equal']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='gnome-terminal'
+name='Launch terminal'
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+next=['<Super>period']
+play=['<Super>slash']
+previous=['<Super>comma']
+screensaver=['<Shift><Super>semicolon']
+volume-down=['<Super>minus']
+volume-mute=['<Shift><Super>minus']
+volume-up=['<Super>equal']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='gnome-terminal'
+name='Launch terminal'
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+next=['<Super>period']
+play=['<Super>slash']
+previous=['<Super>comma']
+screensaver=['<Shift><Super>semicolon']
+volume-down=['<Super>minus']
+volume-mute=['<Shift><Super>minus']
+volume-up=['<Super>equal']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='gnome-terminal'
+name='Launch terminal'
