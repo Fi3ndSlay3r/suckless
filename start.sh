@@ -1,3 +1,5 @@
+#!/bin/sh
+
 slstatus &
 mons=$(xrandr | grep -w "connected" | sed 's/\s.*$//')
 extMon=$(echo $mons | awk '{print $2;}')

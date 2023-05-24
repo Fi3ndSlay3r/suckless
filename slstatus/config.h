@@ -66,7 +66,7 @@ static const struct arg args[] = {
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
     //{ netspeed_rx, "%sB/s  ", "enp0s3" },
-	{ run_command, "%4s%|", "pamixer --get-volume" },
+	{ run_command, "%4s%|", "pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -n 1" },
 	{ cpu_perc, " %s%%|", NULL},
 	{ ram_used, " %s|", NULL},
 	{ battery_perc, " %s%%","BAT0"},

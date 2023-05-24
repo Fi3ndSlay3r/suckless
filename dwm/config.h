@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hermit:style=Regular:size=11", "FontAwesome6Brands:size=11:antialias:true", "FontAwesome6Free:size=11:antialias:true", "FontAwesome6Free:style=Solid:size=11:antialias:true"};
-static const char dmenufont[]       = "RHermit:style=Regular:size=11";
+static const char dmenufont[]       = "Hermit:style=Regular:size=11";
 //background color
 static const char col_gray1[]       = "#222222";
 //inactive window border color
@@ -71,21 +71,21 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *monitor[] = { "/usr/binr/btop", NULL };
 static const char *music[] = { "spotify", NULL };
 static const char *web[] = { "librewolf", NULL };
-static const char *termcmd[]  = { "kitty", NULL };
-static const char *code[] = { "code", NULL };
+static const char *termcmd[]  = { "st", NULL };
+//static const char *code[] = { "code", NULL };
 static const char *slock[] = {"slock",NULL};
 
 // Volume controls
-//static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
-//static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
-//static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
+static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
+static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static const char *volmutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
  static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+1%", NULL };
  static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-1%", NULL };
 
 //static const char *volupcmd[] = { "/bin/bash", "-c", "pamixer -D default sset Master Playback 1%+" };
-static const char *volmaxcmd[] = { "/bin/bash", "-c", "pamixer -D default sset Master Playback 100%" };
+//static const char *volmaxcmd[] = { "/bin/bash", "-c", "pamixer -D default sset Master Playback 100%" };
 //static const char *voldowncmd[] = { "/bin/bash", "-c", "pamixer -D default sset Master Playback 1%-" };
 //static const char *volmutecmd[] = { "/bin/bash", "-c", "pamixer -D default sset Master Playback 0%" };
   static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
@@ -97,7 +97,6 @@ static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_f,       spawn,          {.v = web } },
-	{ MODKEY,                       XK_c,       spawn,          {.v = code } },
 	{ MODKEY,                       XK_s,       spawn,          {.v = music } },
 	{ MODKEY,                       XK_d,       spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return,  spawn,          {.v = termcmd } },
