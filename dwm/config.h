@@ -74,7 +74,7 @@ static const char *web[] = { "librewolf", NULL };
 static const char *termcmd[]  = { "st", NULL };
 //static const char *code[] = { "code", NULL };
 static const char *slock[] = {"slock",NULL};
-static const char *screens[] = {"/bin/sh", "-c", "screens.sh",NULL};
+static const char *screens[] = {"/bin/sh", "-c", "/home/ap/projects/.local/bin/screens",NULL};
 
 // Volume controls
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
