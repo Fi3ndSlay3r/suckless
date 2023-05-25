@@ -74,6 +74,7 @@ static const char *web[] = { "librewolf", NULL };
 static const char *termcmd[]  = { "st", NULL };
 //static const char *code[] = { "code", NULL };
 static const char *slock[] = {"slock",NULL};
+static const char *screens[] = {"/bin/sh", "-c", "screens.sh",NULL};
 
 // Volume controls
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
@@ -101,6 +102,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,       spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return,  spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_p,       spawn,          {.v = flameshot} },
+	{ MODKEY|ShiftMask,             XK_o,       spawn,          {.v = screens} },
 	{ MODKEY,                       XK_t,       togglebar,      {0} },
 	{ MODKEY,                       XK_j,       focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,       focusstack,     {.i = -1 } },
